@@ -1,0 +1,22 @@
+<html>
+    <h1>Delete Movie</h1>
+
+    <div>
+        {{> menu}}
+    </div>
+    <div>
+    {{#movieList}}
+
+        <form action='/movies/delete-movie' method='POST'>
+            <img src={{image}}>
+            {{title}}
+            <input type="submit" value="Delete">
+            <input type="hidden" name="movieName" value="{{movieID}}">
+
+        </form>
+    {{/movieList}}
+    {{> noMovies}}
+    </div>
+
+
+</html>

@@ -1,0 +1,24 @@
+<html>
+    <h1>View All Movies</h1>
+
+    <div>
+        {{> menu}}
+    </div>
+    <div>
+        {{#movieList}}
+            <form method='get' action='/movies/{{movieID}}'>
+                <img src={{image}}>
+                {{title}}
+                <button>View Info</button>
+
+            </form>
+        {{/movieList}}
+        {{> noMovies}}
+
+
+
+
+    </div>
+
+
+</html>

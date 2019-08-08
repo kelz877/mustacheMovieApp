@@ -1,0 +1,19 @@
+<html>
+    <h1>{{genre}} Movies</h1>
+
+    <div>
+        {{> menu}}
+    </div>
+    <div>
+        {{#genreList}}
+                <img src={{image}}>
+                <b>Movie Title: </b>{{title}}
+                <b>Movie Description: </b>{{description}}
+                <b>Movie Genre: </b>{{genre}}
+        {{/genreList}}
+
+
+    </div>
+
+
+</html>

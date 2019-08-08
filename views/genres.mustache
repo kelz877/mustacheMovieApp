@@ -1,0 +1,33 @@
+<html>
+    <h1>Movie Genres</h1>
+
+    <div>
+        {{> menu}}
+    </div>
+    <div>
+        <h2>Choose a genre of movies to view</h2>
+        <form action='/movies/genres/{{genre}}' method='GET'>
+            <input type="text">
+            <button>Genres</button>
+        </form>
+
+
+    </div>
+        <div>
+        {{#movieList}}
+            <form method='get' action='/movies/{{movieID}}'>
+                <img src={{image}}>
+                {{title}}
+                <button>View Info</button>
+
+            </form>
+        {{/movieList}}
+        {{> noMovies}}
+
+
+
+
+    </div>
+
+
+</html>
